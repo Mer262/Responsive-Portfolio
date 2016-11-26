@@ -1,3 +1,33 @@
+/*Assignment One Instructions - (No Bootstrap)
+
+Inside your Responsive-Portfolio folder, find your
+style.css file, it may be in assets/css. At the bottom
+of styles.css you will write your media queries.
+
+** Use three @media screen tags, each with one of these
+max-widths: 980px, 768px and 640px.
+
+** You use 980px because you never want any of the content
+to be cut off. Since the desktop layout is about 960px wide,
+you want the media queries to kick in before your content
+gets cut off.
+
+** 768px is about the width of a tablet and 640px is about
+the width of a phone in landscape
+
+Make the position of the header static (the default positioning)
+when the screen is 640px wide. The header design takes up a
+lot of room; you don't want it to stick to the top of a small
+screen and leave no room for the rest of your site.
+
+Be sure to include the viewport tag in all your html files,
+otherwise your media-queries won't function like you'd expect
+on mobile devices.
+
+Protip: Use the Chrome extensions Window Resizer and Browser
+Width to see the browser dimensions in Chrome.*
+*/
+
 body {
     background: url("../images/light_grey.png");
     font-size: 18px;
@@ -243,4 +273,123 @@ input[type=submit] {
     font-size: 18px;
     padding: 10px 30px;
     cursor: pointer;
+}
+
+
+/* These rules take effect when the browser's width
+is between 980px and 769px.*/
+
+@media screen and (max-width: 980px) {
+    .container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main-section {
+        max-width: 420px;
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .auth-image {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+    #logo {
+        margin-left: 20px;
+    }
+    .sidebar {
+        float: left;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    nav {
+        margin-right: 25px;
+    }
+}
+
+
+/* These rules take effect when the browser's width
+is betwenn 768px and 641px.*/
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: : 768px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main-section {
+        max-width: 725px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .auth-image {
+        width: 330px;
+        height: auto;
+        margin-top: 10px;
+        float: left;
+    }
+    #logo {
+        margin-left: 20px;
+    }
+    .sidebar {
+        clear: both;
+        margin-right: 20px;
+        margin-left: 20px;
+        max-width: 725px;
+    }
+    nav {
+        margin-right: 25px;
+    }
+}
+
+
+/* These rules take effect when the browser's width
+is either 640px or less.*/
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: : 640px;
+        width: 100%;
+    }
+    .main-section {
+        max-width: 600px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .auth-image {
+        width: 530px;
+        height: auto;
+        margin-top: 10px;
+        clear: left;
+    }
+    #logo {
+        width: 100%;
+        margin: 0;
+    }
+    #masthead {
+        position: static;
+        margin-bottom: 0;
+    }
+    #main-container {
+        padding: 10px;
+    }
+    .sidebar {
+        clear: both;
+        margin-right: 5px;
+        margin-left: 5px;
+        max-width: 600px;
+    }
+    nav {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav a {
+        margin-left: 0;
+        padding-left: 90px;
+    }
 }
