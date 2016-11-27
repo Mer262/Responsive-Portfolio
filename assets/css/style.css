@@ -359,7 +359,7 @@ is either 640px or less.*/
         margin-right: 5px;
     }
     .auth-image {
-        width: 530px;
+        max-width: 100%;
         height: auto;
         margin-top: 10px;
         clear: left;
@@ -383,13 +383,16 @@ is either 640px or less.*/
     }
     nav {
         width: 100%;
-        margin: 10px;
         text-align: center;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-left: 5px;
     }
     nav a {
-        margin-left: 0;
-        padding-left: 90px;
+        padding-left: 45px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 }
