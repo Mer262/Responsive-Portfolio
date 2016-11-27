@@ -360,10 +360,15 @@ is either 640px or less.*/
         margin-right: 5px;
     }
     .auth-image {
-        max-width: 100%;
+        max-width: 530px;
+        width: 100%;
         height: auto;
         margin-top: 10px;
-        clear: left;
+        margin-bottom: 10px;
+        /*clear: left;*/
+    }
+    p {
+        float: left;
     }
     #logo {
         width: 100%;
